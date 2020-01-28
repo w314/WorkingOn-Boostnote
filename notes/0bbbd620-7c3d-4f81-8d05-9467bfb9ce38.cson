@@ -1,5 +1,5 @@
 createdAt: "2020-01-18T00:16:49.145Z"
-updatedAt: "2020-01-18T00:54:29.072Z"
+updatedAt: "2020-01-24T18:53:44.013Z"
 type: "MARKDOWN_NOTE"
 folder: "0502aa55141f2315e808"
 title: "How to start a node project"
@@ -9,9 +9,13 @@ tags: [
   "package"
 ]
 content: '''
+  
   ## How to start a node project
   
   #### Create a project directory with a starter file (index.html)
+  
+  #### Create a git repository for your project
+  - run `git init`
     
   #### Initate your node project
   - go to you project in the terminal
@@ -43,8 +47,7 @@ content: '''
   - run `echo 'node_modules' > .gitignore` in the terminal
   - as running `npm install` for any node project will install the dependencies defined in the `package.json` file a backup of those file are not needed
   
-  #### Create a git repository for your project
-  - run `git init`
+  #### Save you setup in your `git` repository
   - run `git add .`
   - run `git commit -m 'Initial Setup'`
   - add you remote git repositry with: `git remote add origin [remoteRepoURL]`
@@ -56,6 +59,8 @@ content: '''
   - the `lite-server` will serve the up the contents of the porject folder (the file, specified as `main` in the `package.json` file ?)  - it will also tell you in the terminal how to acces the served up content, on you local machine the default is `localhost:3000`
   - it will open you browser and serve up the files there
 '''
-linesHighlighted: []
+linesHighlighted: [
+  35
+]
 isStarred: false
 isTrashed: false
