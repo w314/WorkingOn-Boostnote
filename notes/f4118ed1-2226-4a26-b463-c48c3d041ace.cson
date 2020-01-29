@@ -1,0 +1,43 @@
+createdAt: "2020-01-29T20:25:43.320Z"
+updatedAt: "2020-01-29T20:37:15.693Z"
+type: "MARKDOWN_NOTE"
+folder: "0502aa55141f2315e808"
+title: "Security in AWS"
+tags: [
+  "aws"
+  "iam"
+  "security"
+]
+content: '''
+  ## Security in AWS
+  
+  ### The `root` user
+  - the email address you use to sign up for your account becomes your `root` level account and has full access and permissions to any and everything in your account
+  - don't use `root` user credentials for everyday access
+  
+  ### Securing `root` account
+  - use `MFA` Multi Factor Authentication
+  
+  ### `IAM` (Identity & Access Management) user
+  - an `IAM` user is an entity you create that can represent a person or a service that interacts with services or applications running in the AWS account
+  - a user consists of a:
+      - user name
+      - access credentials
+  
+  ### `IAM Group`
+  - is a collection of users
+  - can specify permissions for a collections
+  - makes permission easier to manage
+  
+  ### `IAM Role`
+  - an identity with permissions or a set of privileges
+  - not associated with a specific `IAM user` or `IAM group`
+  - roles can be attached to a user
+  - user can assume a single role temporarily to perform a specific task
+  
+  ### `Policy`
+  - is a way to define granular level permission
+'''
+linesHighlighted: []
+isStarred: false
+isTrashed: false

@@ -1,5 +1,5 @@
 createdAt: "2020-01-29T18:30:45.467Z"
-updatedAt: "2020-01-29T19:04:14.411Z"
+updatedAt: "2020-01-29T20:25:40.298Z"
 type: "MARKDOWN_NOTE"
 folder: "0502aa55141f2315e808"
 title: "Amazon Web Services what is what"
@@ -11,7 +11,40 @@ content: '''
   
   `AWS` Amazon Web Services
   
+  `PII` Personally Identifiable Information
+  
+  `DDoS` Distributed Denial of Service
+  - an attempt to make an application unavailable by overwhelming it with traffic from multiple sources
+  
+  `XSS` Cross Site Scripting
+  - is a client side code injection attack
+  - can change website content, or redirect to other website
+  - has access to user's cookies, therefore can impersonate the user and gain access to sensitive information
+  - can get access to user's geolocation, camera, files...
+  
+  
+  `AWS Shield`
+  - is a managed `DDoS` protection service
+  - it runs always automatically
+  - part of free standard tier
+  
+  `Firewall`
+  - firewall is a network security mechanism that monitors and controlls incoming and outgoing network traffic based on preset security rules
+  
+  `AWS WAF` AWS Web Application Firewall
+  - it guards who an access your application
+  - can stop common web attack like:
+    - SQL injection
+    - cross site scripting
+  - by reviewing the data being sent to your application
+  - `AWS WAF` can protect websites not hosted in AWS through `CloudFront`
+  - you can configure `CloudFront` to preset a custom error page when requests are blocked
+  
   `MFA` Multi Factor Authentication
+  
+  `IAM` Identity & Access Management
+  - is an AWS service that allows us to configure who can access our AWS account, services or even applications running in our account
+  - is a global service and automatically available accross all regions
   
   `S3` Simple Storage Service
   - object storage
