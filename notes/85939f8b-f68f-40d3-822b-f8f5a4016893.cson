@@ -1,0 +1,60 @@
+createdAt: "2020-01-29T18:30:45.467Z"
+updatedAt: "2020-01-29T19:04:14.411Z"
+type: "MARKDOWN_NOTE"
+folder: "0502aa55141f2315e808"
+title: "Amazon Web Services what is what"
+tags: [
+  "aws"
+]
+content: '''
+  ## Amazon Web Services what is what
+  
+  `AWS` Amazon Web Services
+  
+  `MFA` Multi Factor Authentication
+  
+  `S3` Simple Storage Service
+  - object storage
+  - maximum object size 5TB
+  - `MFA Delete` can be enabled on `S3` buckets
+  
+  `S3 Glacier`
+  - storage class for archiving purposes
+  
+  `DynamoDB`
+  - `NoSQL` database service
+  - fully managed
+  - serverless
+  - supports key-value and document data models
+  - synchronously replicates data acress `AZ`-s in an AWS `Region`
+  - supports `GET/PUT` operations using a primary key
+  
+  `RDS` Relational Database Service
+  - Relational Database Service, is an AWS service that aids the administration and management of databases
+  
+  `Redshift`
+  - Cloud data warehousing service of AWS
+  - Stores data in columnar format to aid fast querying
+  - Delivers great performance by using machine learning
+  - Helps manage big data
+  - Encrypts your data in trasit and at rest 
+  
+  `CDN` Content Delivery Network
+  - Content Delivery Network, speeds up the delivery of content by caching content in a data center close to the end user
+  
+  
+  `Edge Location`
+  - Amazon's worldwide network of mini data centers 
+  
+  
+  `CloudFront`
+  - Amazon's global content delivery network (CDN)
+  - Caches content in `Edge Locations`
+  - End-users request are served from the closest `Edge Location`
+  - Works with non AWS origin sources
+  - Cache control headers determine how frequently `CloudFront` needs to check the origin for an updated version of your file
+  - Maximum size of file that can be delivered is 20GB
+'''
+linesHighlighted: []
+isStarred: false
+isTrashed: false

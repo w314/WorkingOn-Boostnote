@@ -1,8 +1,8 @@
 createdAt: "2020-01-27T17:17:43.946Z"
-updatedAt: "2020-01-28T18:05:20.457Z"
+updatedAt: "2020-01-29T18:36:52.489Z"
 type: "MARKDOWN_NOTE"
 folder: "0502aa55141f2315e808"
-title: "How to set up an EC2 instance within a PVC"
+title: "EC2 (Elastic Cloud Computer) and PVC (Private Virtual Cloud) in AWS"
 tags: [
   "aws"
   "ec2"
@@ -10,7 +10,7 @@ tags: [
   "ebs"
 ]
 content: '''
-  ## How to set up an `EC2` instance within a `PVC`
+  ## `EC2` (Elastic Cloud Computer) and `PVC` (Private Virtual Cloud) in AWS
   
   ### Setup your `VPC` Virtual Private Cloud
   

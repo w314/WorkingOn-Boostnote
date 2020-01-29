@@ -1,16 +1,15 @@
 createdAt: "2020-01-18T00:16:49.145Z"
-updatedAt: "2020-01-24T18:53:44.013Z"
+updatedAt: "2020-01-29T18:37:28.744Z"
 type: "MARKDOWN_NOTE"
 folder: "0502aa55141f2315e808"
-title: "How to start a node project"
+title: "Node projects and how to start them"
 tags: [
   "node"
   "lite-server"
   "package"
 ]
 content: '''
-  
-  ## How to start a node project
+  ## Node projects and how to start them
   
   #### Create a project directory with a starter file (index.html)
   
@@ -60,7 +59,7 @@ content: '''
   - it will open you browser and serve up the files there
 '''
 linesHighlighted: [
-  35
+  34
 ]
 isStarred: false
 isTrashed: false

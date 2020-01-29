@@ -1,5 +1,5 @@
 createdAt: "2020-01-29T00:18:10.680Z"
-updatedAt: "2020-01-29T00:39:51.530Z"
+updatedAt: "2020-01-29T19:04:35.759Z"
 type: "MARKDOWN_NOTE"
 folder: "0502aa55141f2315e808"
 title: "DynamoDB"
@@ -9,6 +9,13 @@ tags: [
 ]
 content: '''
   ## `DynamoDB`
+  
+  - `NoSQL` database service
+  - fully managed
+  - serverless
+  - supports key-value and document data models
+  - synchronously replicates data acress `AZ`-s in an AWS `Region`
+  - supports `GET/PUT` operations using a primary key
   
   ### Create `DynamoDB` Table
   - Find `DynamoDB` in `AWS Management Console`

@@ -1,14 +1,14 @@
 createdAt: "2020-01-28T21:39:33.567Z"
-updatedAt: "2020-01-28T22:01:21.534Z"
+updatedAt: "2020-01-29T18:36:02.216Z"
 type: "MARKDOWN_NOTE"
 folder: "0502aa55141f2315e808"
-title: "How to create a lambda function"
+title: "lambda function in AWS"
 tags: [
   "aws"
   "lambda"
 ]
 content: '''
-  ## How to create a `lambda` function
+  ## `lambda` function in AWS
   
   `Lambda` is a serverless technology.
   
