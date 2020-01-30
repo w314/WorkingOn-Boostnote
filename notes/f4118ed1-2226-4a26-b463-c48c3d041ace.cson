@@ -1,5 +1,5 @@
 createdAt: "2020-01-29T20:25:43.320Z"
-updatedAt: "2020-01-29T20:37:15.693Z"
+updatedAt: "2020-01-30T16:30:37.418Z"
 type: "MARKDOWN_NOTE"
 folder: "0502aa55141f2315e808"
 title: "Security in AWS"
@@ -9,7 +9,7 @@ tags: [
   "security"
 ]
 content: '''
-  ## Security in AWS
+  # Security in AWS
   
   ### The `root` user
   - the email address you use to sign up for your account becomes your `root` level account and has full access and permissions to any and everything in your account
@@ -18,7 +18,12 @@ content: '''
   ### Securing `root` account
   - use `MFA` Multi Factor Authentication
   
-  ### `IAM` (Identity & Access Management) user
+  ## `IAM` (Identity & Access Management)
+  `IAM` is an AWS service, that allows us to configure who can access our AWS account, services or applications running in our account.
+  
+  It's a global service, that is automatically available.
+  
+  ### `IAM User`
   - an `IAM` user is an entity you create that can represent a person or a service that interacts with services or applications running in the AWS account
   - a user consists of a:
       - user name
@@ -37,6 +42,33 @@ content: '''
   
   ### `Policy`
   - is a way to define granular level permission
+  - written in JSON
+  - can be attached to:
+    - users
+    - groups
+    - roles
+  - AWS has predifined list of policies
+  - you can add custom ones:
+      - Navigate to IAM
+      - Click `Policies` on left panel, than `Create Policy`
+      - Next to `Service` click `Choose a service`
+      - Type `S3` in the box, click `Enter`, select `S3` from list
+      - Under `Actions` in the `Access Level` section
+        - Click on `List`
+        - Expand `Read` and select `GetObject`
+      - Expand the `Resources` section
+        - Ensure `Specific` is selected
+        - Select the `Any` checkpoxed next to `bucket` and `object`
+      - Click `Review Policy`
+      - Enter `Name` for policy
+      - Click `Create Policy`
+  
+  
+  ## `EC2 Security Group`
+  - NOT part of `IAM`, NOT an `IAM Security Group`
+  - are assicated with an `EC2` instance
+  - act an as a built-in firewall
+  - 
 '''
 linesHighlighted: []
 isStarred: false
