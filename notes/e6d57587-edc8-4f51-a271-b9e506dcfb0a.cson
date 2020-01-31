@@ -1,5 +1,5 @@
 createdAt: "2020-01-28T23:29:59.732Z"
-updatedAt: "2020-01-29T00:03:57.808Z"
+updatedAt: "2020-01-31T16:42:27.151Z"
 type: "MARKDOWN_NOTE"
 folder: "0502aa55141f2315e808"
 title: "Elastic Beanstalk"
@@ -42,6 +42,7 @@ content: '''
   - Select `Action` -> `Delete Application`
   - Enter the name of the application
   - Click `Delete`
+  - (Looks like it doesn't delete the `S3 bucket` created)
 '''
 linesHighlighted: []
 isStarred: false
