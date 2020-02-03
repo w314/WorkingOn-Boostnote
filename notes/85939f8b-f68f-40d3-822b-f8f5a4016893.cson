@@ -1,5 +1,5 @@
 createdAt: "2020-01-29T18:30:45.467Z"
-updatedAt: "2020-01-30T17:40:03.955Z"
+updatedAt: "2020-02-03T14:37:28.799Z"
 type: "MARKDOWN_NOTE"
 folder: "0502aa55141f2315e808"
 title: "Amazon Web Services what is what"
@@ -11,12 +11,24 @@ content: '''
   
   `AWS` Amazon Web Services
   
-  `SNS` Simple Notification Service
-  
   `IP Address` Internet Protocol Address
   
-  `DNS` Domain Name System
+  #### AWS Global Infrastructure
   
+  `Region` 
+  - Part of AWS Global Infrastructure. Refers to a geographic location or an area on a map
+  - Has several, at least two `Availability Zones` (`AZ`)
+  - You deploy you application in the `Region` depending where your users are, to minimize latency
+  
+  `AZ` Availability Zone
+  - a physical data center within a specific `Region`
+  - a disctinct, isolated location within a geographic region, engineered to be isolated from failers
+  
+  `Edge Location`
+  - mini data center
+  - used solely to cache files closer to a user's location
+  
+  #### AWS Security
   
   `PII` Personally Identifiable Information
   
@@ -28,7 +40,6 @@ content: '''
   - can change website content, or redirect to other website
   - has access to user's cookies, therefore can impersonate the user and gain access to sensitive information
   - can get access to user's geolocation, camera, files...
-  
   
   `AWS Shield`
   - is a managed `DDoS` protection service
@@ -52,6 +63,8 @@ content: '''
   `IAM` Identity & Access Management
   - is an AWS service that allows us to configure who can access our AWS account, services or even applications running in our account
   - is a global service and automatically available accross all regions
+  
+  
   
   `S3` Simple Storage Service
   - object storage
@@ -82,11 +95,6 @@ content: '''
   `CDN` Content Delivery Network
   - Content Delivery Network, speeds up the delivery of content by caching content in a data center close to the end user
   
-  
-  `Edge Location`
-  - Amazon's worldwide network of mini data centers 
-  
-  
   `CloudFront`
   - Amazon's global content delivery network (CDN)
   - Caches content in `Edge Locations`
@@ -95,6 +103,10 @@ content: '''
   - Cache control headers determine how frequently `CloudFront` needs to check the origin for an updated version of your file
   - Maximum size of file that can be delivered is 20GB
   
+  #### AWS Domain Name Service
+  
+  `DNS` Domain Name System
+  
   `Route 53`
   - Is a DNS (Domain Name System) service
   - Allows you to register and manage a domain name
@@ -102,6 +114,8 @@ content: '''
   - Allows you to route users based on the user's geographic location
   - Checks the health of your servers
   - Scales automatically to handle spikes in DNS queries
+  
+  #### AWS Servers
   
   `EC2` Elastic Computer Cloud
   - Virtual server in the cloud
@@ -124,6 +138,28 @@ content: '''
   `AWS Auto Scaling`
   - Different than `EC2 Auto Scaling`
   - Service to setup auto scaling of other services (like DynamoDB)
+  
+  #### AWS Notification
+  `Notification`
+  - message from system to user
+  
+  `Message`
+  - are sent form one system to another
+  
+  `Publish/Subscribe Model`
+  - in order for the users to be notified they have to sign up or subsrcibe first
+  
+  `SNS` Simple Notification Service
+  - a cloud service that allows you to send notifications to your users
+  
+  `SQS` Simple Queuing Service
+  - a fully managed message queuing service
+  
+  #### AWS Management
+  
+  `Cloud Trail`
+  - A logging service that records all AWS API calls accouring in your account
+  
 '''
 linesHighlighted: []
 isStarred: false

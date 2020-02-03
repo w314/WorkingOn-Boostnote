@@ -1,0 +1,26 @@
+createdAt: "2020-02-03T14:35:26.764Z"
+updatedAt: "2020-02-03T14:36:30.803Z"
+type: "MARKDOWN_NOTE"
+folder: "0502aa55141f2315e808"
+title: "AWS Management"
+tags: [
+  "aws"
+  "management"
+  "cloudtrail"
+]
+content: '''
+  ## AWS Management
+  
+  `Cloud Trail`
+  - A logging service that records all AWS API calls accouring in your account
+  - Shows results for the last 90 days
+  - automatically enabled and free
+  - for extra charge can create up to 5 trails in an AWS Region
+  
+  
+  
+  
+'''
+linesHighlighted: []
+isStarred: false
+isTrashed: false
