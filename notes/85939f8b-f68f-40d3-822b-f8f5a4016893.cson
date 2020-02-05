@@ -1,5 +1,5 @@
 createdAt: "2020-01-29T18:30:45.467Z"
-updatedAt: "2020-02-03T14:37:28.799Z"
+updatedAt: "2020-02-05T15:34:22.736Z"
 type: "MARKDOWN_NOTE"
 folder: "0502aa55141f2315e808"
 title: "Amazon Web Services what is what"
@@ -159,6 +159,21 @@ content: '''
   
   `Cloud Trail`
   - A logging service that records all AWS API calls accouring in your account
+  
+  `Cloud Watch`
+  - a service that monitors AWS resources and applications by collecting data in the forms of logs, metrics and events
+  
+  `Infrastructure as Code`
+  - a way to describe and provision all the infrastructure resources in the cloud environment
+  - you can stand up servers, databases, runtime parameters, resources based on scripts you write
+  
+  `Cloud Formation `
+  - AWS `Infrastructure as Code` service
+  
+  `CLI` Command Line Interface
+  - `CLI` allows you to access and control running in your AWS account from the command line
+  
+  
   
 '''
 linesHighlighted: []

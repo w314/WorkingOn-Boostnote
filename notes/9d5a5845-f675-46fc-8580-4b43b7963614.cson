@@ -1,5 +1,5 @@
 createdAt: "2020-01-27T17:17:43.946Z"
-updatedAt: "2020-01-30T17:42:23.793Z"
+updatedAt: "2020-02-04T16:31:44.843Z"
 type: "MARKDOWN_NOTE"
 folder: "0502aa55141f2315e808"
 title: "EC2 (Elastic Cloud Computer) and PVC (Private Virtual Cloud) in AWS"
@@ -54,7 +54,8 @@ content: '''
   - On the `EC2 Dashboard` Select your `EC2 Instance` and click `Actions` -> `Instance State` -> `Termintate`
   - On the `VPC Dashboard` select the `VPC` just created and click `Actions` -> `Delete VPC`
   
-  ### Setup `EC2 Auto Sclaing`
+  ### Setup `EC2 Auto Scaling`
+  
   
   ### User `EC2 Load Balancing`
   - Make sure your `EC2` instances are up and running
