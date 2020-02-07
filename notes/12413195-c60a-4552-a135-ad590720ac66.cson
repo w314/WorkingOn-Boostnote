@@ -1,0 +1,31 @@
+createdAt: "2020-02-07T20:18:51.638Z"
+updatedAt: "2020-02-07T20:28:57.018Z"
+type: "MARKDOWN_NOTE"
+folder: "7b7225fb954665754643"
+title: "Three Tier Architecture of Web Development"
+tags: [
+  "three_tier_architecture"
+  "presentation_layer"
+  "business_layer"
+  "data_access_layer"
+  "full_stack"
+]
+content: '''
+  ## Three Tier Architecture of Web Development
+  
+  1.  Presentation Layer
+  - delivers information to the user
+  - .UI realated concerns are dealt with here
+  1. Business Logic Layer
+  - data validation
+  - dynamic content processing
+  - generating content to be delivered to the user
+  1. Data Access Layer
+  - how we store and interact with the data
+  - accessing data through an API
+  
+  
+'''
+linesHighlighted: []
+isStarred: false
+isTrashed: false
