@@ -1,0 +1,55 @@
+createdAt: "2019-08-05T22:29:08.411Z"
+updatedAt: "2020-02-07T17:36:48.208Z"
+type: "MARKDOWN_NOTE"
+folder: "0502aa55141f2315e808"
+title: "this in JavaScript"
+tags: [
+  "JS"
+  "this"
+  "javascript"
+]
+content: '''
+  # `this` in JavaScript
+  
+  The value of this inside a function depends on how the function was invoked.
+  
+  
+  ## Invoking a function as a method
+  
+  ```javascript
+  const dog  = {
+    color : 'white',
+    sayColor : function() {
+      console.log(`I'm  a ${this.color} dog.`);
+    },
+  };
+  
+  dog.sayColor();
+  ```
+  > Outputs:
+  I'm a white dog. 
+  
+  The `sayColor()` function is invoked here as a method of the `dog` object. As it was invoked as a method the value of `this` inside the `sayColor()` function is  whatever is left of the dot notation. In this case `this` will refer to the `dog` object it was invoked on.
+  
+  
+  
+  ## Invoking a regular function
+  
+  ```javascript
+  function regularFunction() {
+    this.myNewGlobalVariable = 'This refers to window.'
+  }
+  
+  regularFunction();
+  ```
+  
+  >It creates a new global variable `myNewGlobalVariable` which is a property of the `window` object.
+  >
+  The `window ` object is provided by the browser environment and globally accessible to the JavaScript code.
+  
+  The `window` object is not part of the JavaScript specification, it's developed by [W3C](https:\\\\www.w3.org).
+  
+'''
+linesHighlighted: []
+isStarred: false
+isTrashed: false

@@ -1,0 +1,28 @@
+createdAt: "2019-09-05T20:25:13.811Z"
+updatedAt: "2020-02-07T17:35:37.207Z"
+type: "MARKDOWN_NOTE"
+folder: "0502aa55141f2315e808"
+title: "Jupyter Notebook Shortcuts"
+tags: [
+  "jupyter"
+  "notebook"
+  "shorcuts"
+]
+content: '''
+  # Jupyter Notebook Shortcuts
+  
+  `esc` to switch to command mode
+  `enter` to switch to edit mode
+  `shift + enter` to run code
+  
+  ### When in command mode
+  
+  `m` to turn cell to `markdown`
+  `a` to insert a cell above
+  `b` to insert a cell below
+  `ctrl + enter` run all selected cells
+  `shift + up` select cells above
+'''
+linesHighlighted: []
+isStarred: false
+isTrashed: false

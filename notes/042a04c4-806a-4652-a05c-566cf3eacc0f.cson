@@ -1,0 +1,56 @@
+createdAt: "2019-11-21T18:15:03.534Z"
+updatedAt: "2020-02-07T17:35:27.523Z"
+type: "MARKDOWN_NOTE"
+folder: "0502aa55141f2315e808"
+title: ".forEach()"
+tags: [
+  "js"
+  "javascript"
+  "array"
+  "map"
+  "forEach"
+]
+content: '''
+  ### .forEach()
+  
+  ```javascript
+  let myArray = [1, 2, 3];
+  
+  \\\\ if array is even, add 100 to element
+  myArray.forEach((element, index, array) => {
+    if(element % 2 === 0) {
+      array[index] += 100;
+    }
+  })
+    
+  console.log(myArray)
+  \\\\ [1, 102, 3]
+  ```
+  
+  - the callback function for `.forEach()` takes the parameters:
+    -    element
+    -    index of the element
+    -    array
+  
+  - it returns `undefined`
+  
+  ### .map()
+  
+  ```javascript
+  let myArray = [1, 2, 3];
+  
+  \\\\ if array is even, add 100 to element
+  let newArray = myArray.map((element) => {
+    return (element % 2=== 0) ? element + 100 : element; 
+  })
+    
+  console.log(newArray)
+  \\\\ [1, 102, 3]
+  ```
+  - `.map()` returns a new array
+'''
+linesHighlighted: [
+  26
+]
+isStarred: false
+isTrashed: false

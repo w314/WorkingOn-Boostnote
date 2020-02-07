@@ -1,0 +1,104 @@
+createdAt: "2019-08-19T16:56:04.257Z"
+updatedAt: "2020-02-07T17:36:33.420Z"
+type: "MARKDOWN_NOTE"
+folder: "0502aa55141f2315e808"
+title: "Strings in Python"
+tags: [
+  "python"
+  "string"
+]
+content: '''
+  # Strings in Python
+  
+  String is an ordered squence.
+  
+  ```python
+  str = 'name'
+  str[0]
+  # 'n'
+  str[-1]
+  # 'e'
+  ```
+  
+  ## Escape Sequences
+  
+  | Code |	Output |
+  |------| --------|
+  |\\\\\\	|backslash|
+  |\\\\n|	new line|
+  |\\\\t|	tab|
+  
+  Or `r`for raw string can be placed in front of string:
+  ```python
+  print(r'This is \\ a sample \\n of \\b using r in print')
+  
+  ```
+  
+  ## String Methods
+  String are sequences, therefore list and touple methods work with strings. There are specific string methods too.
+  
+  Strings are immutable. When we apply a method to strins A we get a new string B that is different from A.
+  
+  
+  ### Lenght of String
+  ```python
+  my_str = 'Strange String'
+  len(my_str)
+  # 14
+  ```
+  
+  ### Slicing
+  ```python
+  name = 'Michael Jackson'
+  name[0:4]
+  # 'Mich'
+  name[8:12]
+  # 'Jack'
+  
+  # get every second elementfrom index 0 to 4
+  name[:5:2]
+  # 'Mca'
+  ```
+  
+  ### Concatenating
+  ```python
+  greeting = 'Hello '
+  name = 'Michael'
+  print(greeting + name)
+  # 'Hello Michael'
+  
+  print(2 * 'bye')
+  # 'byebye'
+  ```
+  
+  ## String Operations
+  
+  `upper()`
+  ```python
+  my_str = 'lower case'
+  print(my_str.upper())
+  # 'LOWER CASE'
+  ```
+  
+  `replace()`
+  ```python
+  str1 = 'Michael Jackson is the best.'
+  str2 = str1.replace('Michael','Janet')
+  print(str2)
+  # 'Janet Jackson is the best.'
+  ```
+  
+  `find()`
+  ```python
+  my_str = 'Dog chases squirrel.'
+  my_str.find('squirrel')
+  # 11
+  my_str.find('cat')
+  # -1
+  ```
+  
+  
+'''
+linesHighlighted: []
+isStarred: false
+isTrashed: false

@@ -1,0 +1,24 @@
+createdAt: "2019-08-07T19:39:11.149Z"
+updatedAt: "2020-02-07T17:35:44.859Z"
+type: "MARKDOWN_NOTE"
+folder: "0502aa55141f2315e808"
+title: "Functions in JavaScript"
+tags: [
+  "java"
+  "JS"
+  "function"
+]
+content: '''
+  # Functions in JavaScript
+  
+  ## JavaScript functions are First-Class Functions
+  
+  - can be stored in variables
+  - can be returned from a function
+  - can be passed as arguments into another function
+  
+  
+'''
+linesHighlighted: []
+isStarred: false
+isTrashed: false

@@ -1,0 +1,117 @@
+createdAt: "2019-08-14T15:56:36.909Z"
+updatedAt: "2020-02-07T17:36:46.220Z"
+type: "MARKDOWN_NOTE"
+folder: "0502aa55141f2315e808"
+title: "Objects in JavaScript"
+tags: [
+  "JS"
+  "javascript"
+  "object"
+]
+content: '''
+  ```javascript
+  
+  ```
+  # Objects in JavaScript
+  
+  An object is a data structure, a collection of assicated key\\value pairs.
+  
+  ## Creating an object
+  
+  - with literal notation (recommended):
+  ```javascript
+  const myObject = {};
+  ```
+  
+  - with the `Object()` constructor function:
+  ```javascript
+  const myObject = new Object();
+  ```
+  
+  ## Accessing an object's properties
+  
+  ```javascript
+  const dog = {
+    name: 'Pöttöm',
+    color: 'white',
+    age: 1,
+    1: 'one',
+    friend: {
+      name: 'Lexi',
+      type: 'dog'
+    }
+  }
+  ```
+  - with the dot notation:
+  ```javascript
+  dog.color;
+  \\\\ white
+  ```
+  - with the square bracket notation:
+  ```javascript
+  dog['color'];
+  \\\\white
+  
+  ```
+  
+  - nested objects:
+  ```javascript
+  dog.friend.name;
+  \\\\Lexi
+  dog['friend']['name'];
+  \\\\Lexi
+  ```
+  
+  - Limitations of the dot notation:
+  ```javascript
+  dog.1;
+  \\\\Uncaught SyntaxError: Unexpected number
+  
+  dog[1]; 
+  \\\\one
+  
+  const myVariable = 'color';
+  
+  dog[myVariable];
+  \\\\white
+  
+  dog.myVariable;
+  \\\\undefined
+  ```
+  
+  ## Mondifying object properties
+  
+  ```javascript
+  dog.age += 1;
+  
+  dog.age;
+  \\\\2
+  ```
+  
+  ## Adding object properties
+  
+  ```javascript
+  dog['favourite food'] = 'meat';
+  
+  dog.greet = function() {
+   console.log(`Hi, my name is ${this.name}!`);
+  };
+  ```
+  
+  ## Removing object properties
+  
+  ```javascript
+  delete dog[1];
+  
+  dog[1];
+  \\\\undefined
+  ```
+  ## Objects are passed as reference
+  
+  In JavaScript a primitive (string, nu ber, bigint, boolean, null, undefined, symbol) is immutable, when passed to a function 
+  
+  
+'''
+linesHighlighted: []
+isStarred: false
+isTrashed: false

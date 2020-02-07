@@ -1,0 +1,38 @@
+createdAt: "2019-08-19T18:06:47.919Z"
+updatedAt: "2020-02-07T17:36:38.019Z"
+type: "MARKDOWN_NOTE"
+folder: "0502aa55141f2315e808"
+title: "Variables in JavaScript"
+tags: [
+  "variables"
+  "javascript"
+]
+content: '''
+  # Variables in JavaScript
+  
+  
+  ## Determine Variable Type
+  ```javascript
+  const myVar = 1;
+  typeOf(myVar);
+  \\\\ number
+  ```
+  
+  ## Arithmetic Operations
+  ```javascript
+  const a = 1;
+  const b = 2;
+  const c = a \\ b;
+  console.log(c);
+  \\\\ 0.5
+  ```
+  
+  
+  
+  
+  
+  
+'''
+linesHighlighted: []
+isStarred: false
+isTrashed: false

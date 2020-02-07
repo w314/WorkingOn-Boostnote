@@ -1,0 +1,30 @@
+createdAt: "2019-08-28T16:50:40.083Z"
+updatedAt: "2020-02-07T17:36:10.728Z"
+type: "MARKDOWN_NOTE"
+folder: "0502aa55141f2315e808"
+title: "Conditions and Branching in Python"
+tags: [
+  "if"
+  "python"
+]
+content: '''
+  # Conditions and Branching in Python
+  
+  ```python
+  if (a > 2 ):
+    print('a is higher than 2')
+  elif(a == 2):
+    print('a equals 2')
+  else: 
+    print('a is less than 2')  
+  ```
+  
+  ### Logic operators in python
+  - `not()
+  - `or`
+  - `and`
+  
+'''
+linesHighlighted: []
+isStarred: false
+isTrashed: false

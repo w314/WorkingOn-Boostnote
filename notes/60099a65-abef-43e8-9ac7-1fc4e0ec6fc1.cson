@@ -1,0 +1,23 @@
+createdAt: "2019-11-05T20:53:13.639Z"
+updatedAt: "2020-02-07T17:35:23.780Z"
+type: "MARKDOWN_NOTE"
+folder: "0502aa55141f2315e808"
+title: "**file in .gitignore not ignored:**"
+tags: [
+  "git"
+]
+content: '''
+  **file in .gitignore not ignored:**
+  .gitignore only ignores files that are not part of the repository yet. If you already git added some files, their changes will still be tracked. To remove those files from your repository (but not from your file system) use `git rm --cached` on them.
+  
+  **see git configuration**:
+  `git config --list`
+  
+  **configure git**:
+  `git config --global user.name "Piroska Werner"`
+  
+  
+'''
+linesHighlighted: []
+isStarred: false
+isTrashed: false

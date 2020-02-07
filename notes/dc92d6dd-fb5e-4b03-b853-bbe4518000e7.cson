@@ -1,0 +1,23 @@
+createdAt: "2019-10-25T00:08:11.347Z"
+updatedAt: "2020-02-07T17:35:29.846Z"
+type: "MARKDOWN_NOTE"
+folder: "0502aa55141f2315e808"
+title: "#!/usr/bin/env python3 is a **shebang** line."
+tags: [
+  "python"
+  "shebang"
+]
+content: '''
+  `#!\\usr\\bin\\env python3` is a **shebang** line.
+  
+  A shebang line defines where the interpreter is located.
+  
+  Without the shebang line, the operating system does not know it's a python script, even if you set the execution flag on the script and run it like .\\script.py.
+  
+  To make the script run by default in python3, either invoke it as python3 script.py or set the shebang line.
+  
+  You can use `#!\\usr\\bin\\env python3` vs `#!\\usr\\bin\\python3` for portability across different systems in case they have the language interpreter installed in different locations.
+'''
+linesHighlighted: []
+isStarred: false
+isTrashed: false

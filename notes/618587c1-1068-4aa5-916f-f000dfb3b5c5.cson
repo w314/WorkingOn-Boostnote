@@ -1,0 +1,37 @@
+createdAt: "2020-01-24T18:58:41.279Z"
+updatedAt: "2020-02-07T17:35:55.848Z"
+type: "MARKDOWN_NOTE"
+folder: "0502aa55141f2315e808"
+title: "How to use Bootstrap with you project"
+tags: [
+  "bootstrap"
+  "npm"
+]
+content: '''
+  ## How to use Bootstrap with you project
+  
+  #### Set up your project to use npm
+  See note about npm.
+  
+  #### Use npm to install Bootstrap
+  - Run: `npm install bootstrap --save`
+  - As bootstrap is dependent on JQuery and Popper.js also run:
+    - `npm install jquery --save`
+    - `npm install popper.js --save`
+  
+  
+  #### Set up your web page to use Bootstrap
+  - Link Bootstrap as stylesheet in the `<head>` section:
+  `<link rel="stylesheet" href=".\\node_modules\\bootstrap\\dist\\css\\bootstrap.min">`
+  -Add js components as `<script>` just above the closing `<\\body>` tag in the following order:
+  `<script src="node_modules\\jquery\\dist\\jquery.slim.min.js"><\\script>`
+  `<script src="node_modules\\popper.js\\dist\\umd\\popper.min.js"><\\script>`
+  `<script src="node_modules\\bootstrap\\dist\\js\\bootstrap.min.js"><\\script>`
+    
+  
+  
+  
+'''
+linesHighlighted: []
+isStarred: false
+isTrashed: false

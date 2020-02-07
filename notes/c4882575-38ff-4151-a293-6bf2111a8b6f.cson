@@ -1,0 +1,53 @@
+createdAt: "2019-08-28T17:43:47.393Z"
+updatedAt: "2020-02-07T17:36:08.791Z"
+type: "MARKDOWN_NOTE"
+folder: "0502aa55141f2315e808"
+title: "Loops in Python"
+tags: [
+  "python"
+  "loops"
+  "range"
+]
+content: '''
+  # Loops in Python
+  
+  ## The `range` function
+  
+  - Python3: `range()` produces a range object that allows iteration 
+  ```python
+  my_var = range(2, 5)
+  print(my_var)
+  # range(2, 5)
+  my_list = list(range(2, 5))
+  print(my_list)
+  # [2, 3, 4]
+  ```
+  - Python2:The `range` function outputs and ordered sequense as a list
+  
+  ## `for` loop
+  ```python
+  for number in range(2):
+    print(number)
+  # 0
+  # 1
+  
+  numbers = [1, 2]
+  for num in numbers:
+    print(num)
+  # 1, 2
+  ```
+  
+  ## `while` loop
+  
+  ```python
+  num = 1
+  while num < 3:
+    print(num)
+    num += 1
+  # 1, 2
+  ```
+  
+'''
+linesHighlighted: []
+isStarred: false
+isTrashed: false
