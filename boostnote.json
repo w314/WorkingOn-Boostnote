@@ -4,6 +4,31 @@
       "key": "0502aa55141f2315e808",
       "color": "#30D5C8",
       "name": "Programming Notes"
+    },
+    {
+      "key": "68038d270558e5b040df",
+      "color": "#B013A4",
+      "name": "Python"
+    },
+    {
+      "key": "e6d3330423734e2f4fd6",
+      "color": "#E8D252",
+      "name": "Cloud"
+    },
+    {
+      "key": "7b7225fb954665754643",
+      "color": "#E10051",
+      "name": "Software Development"
+    },
+    {
+      "key": "7869a5810e7871ff4be9",
+      "color": "#E10051",
+      "name": "JavaScript"
+    },
+    {
+      "key": "1b2c017ab342eea0830f",
+      "color": "#3FD941",
+      "name": "SQL"
     }
   ],
   "version": "1.0"

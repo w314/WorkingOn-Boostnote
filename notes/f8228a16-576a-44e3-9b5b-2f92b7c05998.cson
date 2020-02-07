@@ -1,7 +1,7 @@
 createdAt: "2019-08-19T18:05:22.878Z"
-updatedAt: "2020-02-07T17:36:42.102Z"
+updatedAt: "2020-02-07T20:11:59.846Z"
 type: "SNIPPET_NOTE"
-folder: "0502aa55141f2315e808"
+folder: "68038d270558e5b040df"
 title: ""
 tags: [
   "variables"
@@ -98,11 +98,6 @@ snippets: [
       
     '''
   }
-  {
-    name: "Variables"
-    content: ""
-    linesHighlighted: []
-  }
 ]
 isStarred: false
-isTrashed: false
+isTrashed: true

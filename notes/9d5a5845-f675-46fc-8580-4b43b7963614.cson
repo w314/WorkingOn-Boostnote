@@ -1,7 +1,7 @@
 createdAt: "2020-01-27T17:17:43.946Z"
-updatedAt: "2020-02-04T16:31:44.843Z"
+updatedAt: "2020-02-07T20:09:26.848Z"
 type: "MARKDOWN_NOTE"
-folder: "0502aa55141f2315e808"
+folder: "e6d3330423734e2f4fd6"
 title: "EC2 (Elastic Cloud Computer) and PVC (Private Virtual Cloud) in AWS"
 tags: [
   "aws"
