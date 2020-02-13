@@ -1,0 +1,47 @@
+createdAt: "2020-02-13T17:40:13.522Z"
+updatedAt: "2020-02-13T17:58:34.695Z"
+type: "MARKDOWN_NOTE"
+folder: "0502aa55141f2315e808"
+title: "Deployment"
+tags: [
+  "web_development"
+  "deployment"
+  "minification"
+  "concatenation"
+  "uglification"
+]
+content: '''
+  # Deployment
+  
+  Web development consists of several repeptitive tasks that we want to automate.
+  
+  ## Web development tasks
+  
+  ### CSS Tasks
+  - compailing `Sass` or `Less` into `CSS`
+  - running Autoprefixer to add any vendor prefixes that are needed
+  - minifaction (removing unnecessary characters: white spaces, new line, comments)
+  - concatenation (merging several css files into one)
+  
+  ### JavaScript Tasks
+  - `JSHint`, checking JavaScript code for errors
+  - concatenation
+  - uglification: minification + mangling (reduce local variables to single letters)
+  
+  ### Other tasks
+  - images: optimizing files to reduce file size
+  - watch: watching for changes in files and automatically rerunnig tasks
+  - server and livereload (to follow changes during development, `lite server` is a solution for that)
+  - testing
+  - building site for deployment also called builing up distribution files
+  
+  
+  ## Automate tasks by `NPM Scritps`
+  - found in the `scripts` property in the `package.json` file
+  - `npm start` will run the script under `"start":`
+  - other scripts can be run by the `npm run <scriptName>`command
+  - 
+'''
+linesHighlighted: []
+isStarred: false
+isTrashed: false
