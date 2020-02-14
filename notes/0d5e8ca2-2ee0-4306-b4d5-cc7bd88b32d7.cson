@@ -1,5 +1,5 @@
 createdAt: "2020-02-13T17:40:13.522Z"
-updatedAt: "2020-02-13T17:58:34.695Z"
+updatedAt: "2020-02-14T17:27:23.528Z"
 type: "MARKDOWN_NOTE"
 folder: "0502aa55141f2315e808"
 title: "Deployment"
@@ -40,7 +40,26 @@ content: '''
   - found in the `scripts` property in the `package.json` file
   - `npm start` will run the script under `"start":`
   - other scripts can be run by the `npm run <scriptName>`command
-  - 
+  
+  ### Setup file watch
+  - A scripts is needed to watch file for any changes so when a change happens it can trigger the necessary scripts
+  - The `Watch` npm module could be used for this purpose
+  - We instlall the `Onchange` npm module to do the job
+    - run `npm install install --save-dev onchange`
+    - in `package.json` add to the `scripts` property the line:
+    `"watch:scss": "onchange 'css/*.scss' -- npm run scss"`
+    (in windows use `\\"css/*.scss\\"`)
+    When `npm run watch:scss` is run later, it will watch every `.scss` file in the `css` directory and if any changes happen it will run `npm run scss` to update the css files.
+  
+  ### Setup running multiple scripts at once
+  - `Parallelshel` allows us to execute multiple npm scritps in paralell shells
+  - To install it run: `npm install --save-dev parallelshell`
+  - In `package.json` add to the `scripts` property:
+  `"watch:all": "paralellshell 'npm run watch:scss' 'npm run lite'"`
+  (use `\\"` instead of `'` on windows)
+  - to use paralellshell change `"start"` in the `scripts` property to:
+  `"start": "npm run watch:all"`
+  
 '''
 linesHighlighted: []
 isStarred: false
