@@ -1,15 +1,22 @@
 createdAt: "2019-11-05T20:53:13.639Z"
-updatedAt: "2020-02-07T20:18:16.456Z"
+updatedAt: "2020-02-14T16:52:26.268Z"
 type: "MARKDOWN_NOTE"
 folder: "7b7225fb954665754643"
-title: "**file in .gitignore not ignored:**"
+title: "Commit or Ignore"
 tags: [
   "git"
 ]
 content: '''
-  **file in .gitignore not ignored:**
+  ### Commit or Ignore
+  
+  #### drop unstaged changes
+  `git restore <file>` like it shows in the `git status` instructions
+   
+  
+  #### file in .gitignore not ignored
   .gitignore only ignores files that are not part of the repository yet. If you already git added some files, their changes will still be tracked. To remove those files from your repository (but not from your file system) use `git rm --cached` on them.
   
+  #### Git configuration
   **see git configuration**:
   `git config --list`
   
