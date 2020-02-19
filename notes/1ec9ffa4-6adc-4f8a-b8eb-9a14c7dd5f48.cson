@@ -1,5 +1,5 @@
 createdAt: "2019-08-07T16:46:32.548Z"
-updatedAt: "2020-02-07T20:18:29.888Z"
+updatedAt: "2020-02-19T19:07:23.406Z"
 type: "MARKDOWN_NOTE"
 folder: "7b7225fb954665754643"
 title: "Shell Programming"
@@ -26,6 +26,7 @@ content: '''
   -r : copy directories recursively
   If you copy last change date will be the time of copy and the owner will be the one making the copy.
   Using `-p` preserves the original setup.
+  To copy a directory use the `-r` flag.
   
   ## Working with files
   1. **delete** file: `rm`

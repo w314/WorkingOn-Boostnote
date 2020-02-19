@@ -1,5 +1,5 @@
 createdAt: "2020-01-24T18:58:41.279Z"
-updatedAt: "2020-02-07T20:21:44.575Z"
+updatedAt: "2020-02-14T21:35:07.682Z"
 type: "MARKDOWN_NOTE"
 folder: "7b7225fb954665754643"
 title: "How to use Bootstrap with you project"
@@ -21,12 +21,21 @@ content: '''
   
   
   #### Set up your web page to use Bootstrap
-  - Link Bootstrap as stylesheet in the `<head>` section:
+  1. in the `<head>` section
+    - Link Bootstrap as stylesheet:
   `<link rel="stylesheet" href=".\\node_modules\\bootstrap\\dist\\css\\bootstrap.min">`
+  
+  2. in the `<script>` section
   -Add js components as `<script>` just above the closing `<\\body>` tag in the following order:
+    - jquery first:
   `<script src="node_modules\\jquery\\dist\\jquery.slim.min.js"><\\script>`
+    - then popper:
   `<script src="node_modules\\popper.js\\dist\\umd\\popper.min.js"><\\script>`
+    - then bootstrap:
   `<script src="node_modules\\bootstrap\\dist\\js\\bootstrap.min.js"><\\script>`
+  
+  ### Grid system
+  - to use the `grid` system you have to enclose you content into a `.container` class
     
   
   

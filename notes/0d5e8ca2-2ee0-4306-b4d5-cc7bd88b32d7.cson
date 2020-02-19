@@ -1,5 +1,5 @@
 createdAt: "2020-02-13T17:40:13.522Z"
-updatedAt: "2020-02-14T17:27:23.528Z"
+updatedAt: "2020-02-14T20:56:41.963Z"
 type: "MARKDOWN_NOTE"
 folder: "0502aa55141f2315e808"
 title: "Deployment"
@@ -52,13 +52,29 @@ content: '''
     When `npm run watch:scss` is run later, it will watch every `.scss` file in the `css` directory and if any changes happen it will run `npm run scss` to update the css files.
   
   ### Setup running multiple scripts at once
+  #### `Parallelshell`
   - `Parallelshel` allows us to execute multiple npm scritps in paralell shells
+  (`concurrently` npm module can be used for the same purpose)
   - To install it run: `npm install --save-dev parallelshell`
   - In `package.json` add to the `scripts` property:
-  `"watch:all": "paralellshell 'npm run watch:scss' 'npm run lite'"`
+  `"watch:all": "parallelshell 'npm run watch:scss' 'npm run lite'"`
   (use `\\"` instead of `'` on windows)
+  - **fix bug in parallelshel (3.0.2)** : 
+    - in `node_modules/parallelshell/index.js:105`
+    - change:
+    `cwd: process.versions.node < '8.0.0' ? process.cwd : process.cwd(),`
+    - to:
+    `cwd: parseInt(process.versions.node) < 8 ? process.cwd : process.cwd(),`
+    - as the corrected file is in `.gitignore`, our change is not saved whenever we would recreate the environment with `npm install` we would **have to fix the problem manually each time** again 
   - to use paralellshell change `"start"` in the `scripts` property to:
   `"start": "npm run watch:all"`
+  
+  #### `Concurrently`
+  - if `Parallelshell` is already installed run `npm uninstall parallelshell --save-dev`
+  - to install run `npm install concurrently --save-dev`
+  - change `"watch:all"` line in scripts to:
+  `"watch:all": "concurrently 'npm run watch:scss' 'npm run lite'"`
+  (use `\\"` for `'` in windows) 
   
 '''
 linesHighlighted: []
