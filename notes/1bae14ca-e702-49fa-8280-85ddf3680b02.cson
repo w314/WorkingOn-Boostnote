@@ -1,0 +1,49 @@
+createdAt: "2020-02-20T18:10:14.177Z"
+updatedAt: "2020-02-20T18:52:51.382Z"
+type: "MARKDOWN_NOTE"
+folder: "0502aa55141f2315e808"
+title: "Testing"
+tags: [
+  "unit_testing"
+  "testing"
+  "mocha"
+]
+content: '''
+  # Testing
+  
+  `Testing environment` is the place where you run your tests, like `node.js`or the  browser.
+  `Testing frameworks` are used to create, organize and execute tests, like `Mocha` or `Jasmin`.
+  `Assertion libraries` are tools to verify that things are correct, like `chai.js`, `Node.js` `assert` module. They verify your test results, saving you lots of `if` statements.
+  
+  ```js
+  //Example using should.js and Node.js assert module
+  var output = mycode.doSomething();
+  output.should.equal('bacon'); //should.js
+  assert.eq(output, 'bacon'); //node.js assert
+  
+  // The alternative being:
+  var output = mycode.doSomething();
+  if (output !== 'bacon') {
+    throw new Error('expected output to be "bacon", got '+output);
+  }
+  ```
+  
+  ## Unit testing with `Mocha` in `Node`
+  
+  [`Mocha`](https://github.com/mochajs/mocha) is a javascript test framework running in `Node.js` and in the browser.
+  
+  ## Setup `Mocha`
+  - install by running
+  `npm install --save-dev mocha`
+  
+  - edit `"test:"` under `"scripts" ` in the `package.json` file
+  - run tests with
+  `npm run test`
+  
+  
+  
+  
+'''
+linesHighlighted: []
+isStarred: false
+isTrashed: false
