@@ -1,15 +1,15 @@
 createdAt: "2020-02-20T18:10:14.177Z"
-updatedAt: "2020-02-21T16:26:22.062Z"
+updatedAt: "2020-02-21T21:09:24.027Z"
 type: "MARKDOWN_NOTE"
 folder: "0502aa55141f2315e808"
-title: "Testing"
+title: "Mocha for Testing"
 tags: [
   "unit_testing"
   "testing"
   "mocha"
 ]
 content: '''
-  # Testing
+  # `Mocha` for Testing
   
   `Testing environment` is the place where you run your tests, like `node.js`or the  browser.
   `Testing frameworks` are used to create, organize and execute tests, like `Mocha` or `Jasmin`.
@@ -30,7 +30,7 @@ content: '''
   
   ## Unit testing with `Mocha` in `Node`
   
-  [`Mocha`](https://github.com/mochajs/mocha) is a javascript test framework running in `Node.js` and in the browser.
+  [Mocha](https://github.com/mochajs/mocha.git) is a javascript test framework running in `Node.js` and in the browser.
   
   ## Setup `Mocha`
   - install by running

@@ -1,0 +1,25 @@
+createdAt: "2020-02-21T20:07:14.204Z"
+updatedAt: "2020-02-21T21:11:23.713Z"
+type: "MARKDOWN_NOTE"
+folder: "0502aa55141f2315e808"
+title: "Postman for integration tests"
+tags: [
+  "testing"
+  "integration_test"
+  "postman"
+]
+content: '''
+  ## `Postman` for integration tests
+  
+  - We can test is our server's endpoints work correctly
+  
+  - We can create a collection of test and store it in a `json` format.
+  - To run your collection:
+    - click right side of cell with the name of the collection
+    - click play button next to collection name
+    - click `Run`
+  
+'''
+linesHighlighted: []
+isStarred: false
+isTrashed: false
