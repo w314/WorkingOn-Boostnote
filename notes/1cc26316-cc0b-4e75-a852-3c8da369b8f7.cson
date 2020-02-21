@@ -1,5 +1,5 @@
 createdAt: "2019-08-21T19:30:29.676Z"
-updatedAt: "2020-02-07T20:13:26.041Z"
+updatedAt: "2020-02-21T00:43:33.305Z"
 type: "MARKDOWN_NOTE"
 folder: "1b2c017ab342eea0830f"
 title: "SELECT Statement in SQL"
@@ -70,6 +70,17 @@ content: '''
   FROM author
   ```
   
+  - use `CASE` for conditionals
+  ```sql
+  SELECT
+  CASE 
+      WHEN (a+b+c-GREATEST(a,b,c))/2 <= GREATEST(a,b,c)/2 THEN 'Not A Triangle'
+      WHEN a=b AND a=c THEN "Equilateral"
+      WHEN a=b OR a=c OR b=c THEN 'Isosceles'
+      ELSE 'Scalene'
+  END
+  FROM triangles
+  ``` 
   
   ### Grouping result sets
   
