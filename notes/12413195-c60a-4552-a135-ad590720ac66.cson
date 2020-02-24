@@ -1,16 +1,23 @@
 createdAt: "2020-02-07T20:18:51.638Z"
-updatedAt: "2020-02-07T20:28:57.018Z"
+updatedAt: "2020-02-24T16:38:54.102Z"
 type: "MARKDOWN_NOTE"
 folder: "7b7225fb954665754643"
-title: "Three Tier Architecture of Web Development"
+title: "Web Development Concepts"
 tags: [
   "three_tier_architecture"
   "presentation_layer"
   "business_layer"
   "data_access_layer"
   "full_stack"
+  "web_development"
 ]
 content: '''
+  # Web Development Concepts
+  
+  ## `CORS` (cross-origin resourse sharing)
+  `CORS` defines a way for client web application that are loaded in one domain to interract with resources in a different domain
+  
+  
   ## Three Tier Architecture of Web Development
   
   1.  Presentation Layer
