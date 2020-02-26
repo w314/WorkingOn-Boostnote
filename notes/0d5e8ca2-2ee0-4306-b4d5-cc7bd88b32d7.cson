@@ -1,5 +1,5 @@
 createdAt: "2020-02-13T17:40:13.522Z"
-updatedAt: "2020-02-14T20:56:41.963Z"
+updatedAt: "2020-02-24T17:37:18.996Z"
 type: "MARKDOWN_NOTE"
 folder: "0502aa55141f2315e808"
 title: "Deployment"
@@ -25,7 +25,7 @@ content: '''
   
   ### JavaScript Tasks
   - `JSHint`, checking JavaScript code for errors
-  - concatenation
+  - concatenation to minimize the number of downloads needed
   - uglification: minification + mangling (reduce local variables to single letters)
   
   ### Other tasks
@@ -75,6 +75,12 @@ content: '''
   - change `"watch:all"` line in scripts to:
   `"watch:all": "concurrently 'npm run watch:scss' 'npm run lite'"`
   (use `\\"` for `'` in windows) 
+  
+  ### How to create a distribution folder
+  - it contains all the files for our project that we can simply deploy to a web server that hosts our website
+  - will need a script the will delete and rebuild our distribution folder each time we rebuild it after changing our project
+  - intall `npm` `rim`
+  - 
   
 '''
 linesHighlighted: []

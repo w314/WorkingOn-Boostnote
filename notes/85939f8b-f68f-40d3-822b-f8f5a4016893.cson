@@ -1,5 +1,5 @@
 createdAt: "2020-01-29T18:30:45.467Z"
-updatedAt: "2020-02-07T20:09:20.578Z"
+updatedAt: "2020-02-25T17:14:17.639Z"
 type: "MARKDOWN_NOTE"
 folder: "e6d3330423734e2f4fd6"
 title: "Amazon Web Services what is what"
@@ -12,6 +12,8 @@ content: '''
   `AWS` Amazon Web Services
   
   `IP Address` Internet Protocol Address
+  
+  `ARN` Amazon Resourse Name
   
   #### AWS Global Infrastructure
   
