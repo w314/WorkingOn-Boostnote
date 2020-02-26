@@ -1,5 +1,5 @@
 createdAt: "2020-02-13T17:40:13.522Z"
-updatedAt: "2020-02-24T17:37:18.996Z"
+updatedAt: "2020-02-26T22:19:22.003Z"
 type: "MARKDOWN_NOTE"
 folder: "0502aa55141f2315e808"
 title: "Deployment"
@@ -76,13 +76,75 @@ content: '''
   `"watch:all": "concurrently 'npm run watch:scss' 'npm run lite'"`
   (use `\\"` for `'` in windows) 
   
-  ### How to create a distribution folder
-  - it contains all the files for our project that we can simply deploy to a web server that hosts our website
-  - will need a script the will delete and rebuild our distribution folder each time we rebuild it after changing our project
-  - intall `npm` `rim`
-  - 
+  ## Create files for deployment
   
+  ### Setting up a `dist` (distribution) folder
+  - it contains all the files for our project so that we can simply deploy to a web server that hosts our website.
+  - add the `dist` folder to `.gitignore`
+  
+  ### Cleaning our dist folder
+  - will need a script the will delete and rebuild our distribution folder each time we rebuild it after changing our project, we'll use `rimraf`:
+  `npm install --save-dev rimraf`
+  - `rimraf` will help to clean out a folder completely
+  - add a new `script` in `package.json` file
+  `"clean": "rimraf dist"`
+  where "dist" is the name of your distribution folder
+  
+  ### Copying files
+  - install `copyfiles` `npm` module for copying files from one folder to an other:
+  `npm -g install copyfiles`
+  - we'll need font-awesome files to be available when our page is rendered
+  - in the `package.json` file under `scripts` add:
+  `"copyfonts": "copyfiles -f node_modules/font-awesome/fonts/* dist/fonts"`
+  `-f` means:"copyfiles -f node_modules/font-awesome/fonts/* dist/fonts" copy files without the hieararchy
+  it will create a `dist` directory with a subdirectory `fonts` and copy the font-awesome files there
+  
+  ### Compressing and Minifying images
+  - install `imagemin` `node` module:
+  `npm -g install imagemin-cli`
+  - in `package.json` file add the script:
+  `"imagemin": "imagemin img/* -o dist/img"`
+  where `img/*` is the folder with your images
+  
+  ### Preparing the distribution folder
+  - install `node` module `usemin-cli`
+  - does the modification of html files
+  - concatenates and combines all css files to one and copies it to distribution folder
+  - does the same with javascript files
+  - to do the job `usemin` uses three other modules
+    - `cssmin`
+    - `uglifyjs`
+    - `htmlmin`
+  - to install run:
+  `npm install --save-dev usemin-cli cssmin uglifyjs htmlmin`
+  - mark css files to use for `usemin` in all your html files:
+  ```html
+  <!-- build:css css/main.css -->
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- endbuild -->
+  ```
+  - mark all js files for `usemin` to process in all html files:
+  ``` html
+  <!-- build:js js/main.js -->
+  <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+  <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="js/scripts.js"></script>
+  <!-- endbuild -->
+  ```
+  - setup script in `package.json` file:
+  `"usemin": "usemin contactus.html -d dist --htmlmin -o dist/contactus.html && usemin aboutus.html -d dist --htmlmin -o dist/aboutus.html && usemin index.html -d dist --htmlmin -o dist/index.html"`
+  `-d` for destination folder
+  `--htmlmin` minimize the html files removing comments
+  `-o`
+  - add build script in `package.json` to create distribution folder
+  `"build": "npm run clean && npm run copyfonts && npm run imagemin && npm run usemin"`
 '''
-linesHighlighted: []
+linesHighlighted: [
+  79
+]
 isStarred: false
 isTrashed: false
