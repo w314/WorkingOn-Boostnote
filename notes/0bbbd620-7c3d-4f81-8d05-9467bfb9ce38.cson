@@ -1,5 +1,5 @@
 createdAt: "2020-01-18T00:16:49.145Z"
-updatedAt: "2020-02-07T20:21:56.299Z"
+updatedAt: "2020-02-29T16:24:58.186Z"
 type: "MARKDOWN_NOTE"
 folder: "7b7225fb954665754643"
 title: "Node projects and how to start them"
@@ -10,6 +10,7 @@ tags: [
 ]
 content: '''
   ## Node projects and how to start them
+  `Node.js` enables us to run javascript on the desktop. (vs only in the browser)
   
   #### Create a project directory with a starter file (index.html)
   
@@ -59,7 +60,7 @@ content: '''
   - it will open you browser and serve up the files there
 '''
 linesHighlighted: [
-  34
+  35
 ]
 isStarred: false
 isTrashed: false

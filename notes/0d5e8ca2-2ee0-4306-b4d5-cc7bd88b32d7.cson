@@ -1,5 +1,5 @@
 createdAt: "2020-02-13T17:40:13.522Z"
-updatedAt: "2020-02-26T22:19:22.003Z"
+updatedAt: "2020-02-29T16:28:49.439Z"
 type: "MARKDOWN_NOTE"
 folder: "0502aa55141f2315e808"
 title: "Deployment"
@@ -9,11 +9,18 @@ tags: [
   "minification"
   "concatenation"
   "uglification"
+  "task_runner"
+  "grunt"
+  "gulp"
 ]
 content: '''
   # Deployment
   
   Web development consists of several repeptitive tasks that we want to automate.
+  
+  ## Task Runners
+  The primary task of a task runner to enable us to configure the tasks and then rerun them automatically.
+  `Grunt` and `Gulp` are task runners.
   
   ## Web development tasks
   
@@ -76,13 +83,13 @@ content: '''
   `"watch:all": "concurrently 'npm run watch:scss' 'npm run lite'"`
   (use `\\"` for `'` in windows) 
   
-  ## Create files for deployment
+  ### Create files for deployment
   
-  ### Setting up a `dist` (distribution) folder
+  #### Setting up a `dist` (distribution) folder
   - it contains all the files for our project so that we can simply deploy to a web server that hosts our website.
   - add the `dist` folder to `.gitignore`
   
-  ### Cleaning our dist folder
+  #### Cleaning our dist folder
   - will need a script the will delete and rebuild our distribution folder each time we rebuild it after changing our project, we'll use `rimraf`:
   `npm install --save-dev rimraf`
   - `rimraf` will help to clean out a folder completely
@@ -90,7 +97,7 @@ content: '''
   `"clean": "rimraf dist"`
   where "dist" is the name of your distribution folder
   
-  ### Copying files
+  #### Copying files
   - install `copyfiles` `npm` module for copying files from one folder to an other:
   `npm -g install copyfiles`
   - we'll need font-awesome files to be available when our page is rendered
@@ -99,14 +106,14 @@ content: '''
   `-f` means:"copyfiles -f node_modules/font-awesome/fonts/* dist/fonts" copy files without the hieararchy
   it will create a `dist` directory with a subdirectory `fonts` and copy the font-awesome files there
   
-  ### Compressing and Minifying images
+  #### Compressing and Minifying images
   - install `imagemin` `node` module:
   `npm -g install imagemin-cli`
   - in `package.json` file add the script:
   `"imagemin": "imagemin img/* -o dist/img"`
   where `img/*` is the folder with your images
   
-  ### Preparing the distribution folder
+  #### Preparing the distribution folder
   - install `node` module `usemin-cli`
   - does the modification of html files
   - concatenates and combines all css files to one and copies it to distribution folder
@@ -142,9 +149,18 @@ content: '''
   `-o`
   - add build script in `package.json` to create distribution folder
   `"build": "npm run clean && npm run copyfonts && npm run imagemin && npm run usemin"`
+  
+  ## `Grunt`
+  `Grunt` is a task runner that concentrates on configuration over code.
+  
+  ## `Gulp`
+  `Gulp` is a taks runner that concentrates on code over configuration.
+  
+  
+  
 '''
 linesHighlighted: [
-  79
+  83
 ]
 isStarred: false
 isTrashed: false
