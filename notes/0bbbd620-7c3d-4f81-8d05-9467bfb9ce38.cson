@@ -1,5 +1,5 @@
 createdAt: "2020-01-18T00:16:49.145Z"
-updatedAt: "2020-02-29T16:24:58.186Z"
+updatedAt: "2020-03-02T19:00:36.262Z"
 type: "MARKDOWN_NOTE"
 folder: "7b7225fb954665754643"
 title: "Node projects and how to start them"
@@ -10,7 +10,9 @@ tags: [
 ]
 content: '''
   ## Node projects and how to start them
-  `Node.js` enables us to run javascript on the desktop. (vs only in the browser)
+  - `Node.js` enables us to run javascript on the desktop. (vs only in the browser)
+  - `Node.js` is a JavaScript runtime built on Chrome V8 JavaScript engine.
+  - 
   
   #### Create a project directory with a starter file (index.html)
   
@@ -60,7 +62,7 @@ content: '''
   - it will open you browser and serve up the files there
 '''
 linesHighlighted: [
-  35
+  36
 ]
 isStarred: false
 isTrashed: false

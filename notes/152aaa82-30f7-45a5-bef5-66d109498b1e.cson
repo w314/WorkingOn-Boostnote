@@ -1,0 +1,83 @@
+createdAt: "2020-03-24T16:55:36.553Z"
+updatedAt: "2020-03-24T19:32:31.482Z"
+type: "MARKDOWN_NOTE"
+folder: "0502aa55141f2315e808"
+title: "React"
+tags: [
+  "react"
+  "yarn"
+]
+content: '''
+  # [React](https://reactjs.org/)
+  
+  To install `react` in terminal run: `npm install -g create-react-app`
+  This will install react globally on your computer
+  To check for succesfull installation run: `create-react-app --version`
+  
+  ## to start a react app
+  - create a project directory and cd into it
+  - with yourProjectName run: `create-react-app yourProjectName`
+  Project name cannot have capital letters (npm rule).
+  This will create a subfolder yourProjectName
+  - move into the new subfolder
+  - install [Yarn - Package Manager](https://yarnpkg.com/), it's a popular package manager, that works well with react
+  
+  
+  
+  
+  - JSX has to be compiled to JavaScript. Transpiler like Babel can do it. Babel can be run through a buid tool like Webpack.
+  - Facebook’s Create React App is good for the same purpose and can becsetup without initial configuration. To use it install:
+  - npm install -g create-react-app
+  - In the directory you’d like to create your project enter
+  `create-reac-app project-name`
+  Project name cannot have capital letters (npm rule).
+  - cd into your new project and start it with `npm start`
+  if something is already running on the port change it in `package.json`:
+  ```js
+  {scripts 
+    “start” : “set PORT 3001 && react-scripts start”
+  }  
+  ```
+  
+  ## How to add google map
+  
+  - run `npm install --save react-google-maps`
+  
+  ## How to use react browser router
+  
+  •	in terminal run: `npm install --save react-router-dom`
+  •	in index.js
+  ```js
+  import { BrowserRouter } from ‘react-router-dom’
+  ```
+  - enclose `<App />` like: `<BrowserRouter><App /></BrowserRouter>`
+  
+  - in App.js
+  ```js
+  import { Route } from ‘react-router-dom’
+  ```
+  
+  o	use Route to render UI like:
+  	<Route path=”/” render(() => {}) />
+  	or
+  	<Route path=”/” component=”{}” />
+  
+  •	wherever there is a link
+  o	import { Link } from ‘react-router-dom’
+  o	<Link to=”/”>New Destination</Link>
+  
+  Render UI with external data
+  
+  •	import API 
+  o	import * as MyAPI from ‘./utils/MyAPI’
+  
+  •	to fetch external data add component lifecycle event:
+  o	componentDidMount(){
+    MyAPI.getAllData().then((data) => {this.setState({data})})
+  }
+  
+  
+'''
+linesHighlighted: []
+isStarred: false
+isTrashed: false

@@ -1,5 +1,5 @@
 createdAt: "2020-02-07T20:18:51.638Z"
-updatedAt: "2020-02-29T16:42:22.153Z"
+updatedAt: "2020-03-02T19:05:48.966Z"
 type: "MARKDOWN_NOTE"
 folder: "7b7225fb954665754643"
 title: "Web Development Concepts"
@@ -11,6 +11,7 @@ tags: [
   "full_stack"
   "web_development"
   "user_story"
+  "runtime"
 ]
 content: '''
   # Web Development Concepts
@@ -42,6 +43,17 @@ content: '''
   - Because an epic is generally too large for an agile team to complete in one iteration, it is split into multiple smaller user stories before it is worked on. The epic above could be split into dozens (or possibly hundreds), including these two:
     - As a power user, I can specify files or folders to backup based on file size, date created and date modified.
     - As a user, I can indicate folders not to backup so that my backup drive isn't filled up with things I don't need saved.
+  
+  
+  ## `runtime system`
+  Runtime system (runtime environment) provides an environment in wchich programs run. `Node.js` is a JavaScript runtime. Runtime environment my address a number of issues like:
+  - layout of application memory
+  - how the program accesses variables
+  - mechanisms for passing parameters between procedures
+  - interfacing with the operating system
+  - may handle `garbage collection`, `threads`
+  
+  
 '''
 linesHighlighted: []
 isStarred: false

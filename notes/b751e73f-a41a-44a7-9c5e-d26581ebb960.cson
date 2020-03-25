@@ -1,5 +1,5 @@
 createdAt: "2020-02-26T17:55:46.530Z"
-updatedAt: "2020-02-26T18:44:15.111Z"
+updatedAt: "2020-03-03T15:09:19.704Z"
 type: "MARKDOWN_NOTE"
 folder: "0502aa55141f2315e808"
 title: "Sequelize"
@@ -13,7 +13,9 @@ tags: [
 content: '''
   # [Sequelize](https://sequelize.org/)
   
-  `Sequelize` is a promised based `Node.js` `ORM` for PostgreSQL, MySQL, MariaDB, SQLite and Microsoft SQL Server.
+  - `Sequelize` is a promised based `Node.js` `ORM` (Object-Relational Map)for PostgreSQL, MySQL, MariaDB, SQLite and Microsoft SQL Server.
+  - it allows us to map JavaScript Objects to database tables and vica versa.
+  - using a tool like this saves you from sql injection attacks
   
   To install run: `$ npm install --save sequelize`
   
