@@ -1,43 +1,142 @@
 createdAt: "2020-03-24T16:55:36.553Z"
-updatedAt: "2020-03-24T19:32:31.482Z"
+updatedAt: "2020-03-25T19:52:44.162Z"
 type: "MARKDOWN_NOTE"
 folder: "0502aa55141f2315e808"
 title: "React"
 tags: [
   "react"
   "yarn"
+  "jsx"
 ]
 content: '''
   # [React](https://reactjs.org/)
+  
+  - unlike `Angular`, `React` avoids the separation of rendering logic from other UI logic
+  
+  
+  ## install react
   
   To install `react` in terminal run: `npm install -g create-react-app`
   This will install react globally on your computer
   To check for succesfull installation run: `create-react-app --version`
   
-  ## to start a react app
+  ## start a react app
+  - if using [Yarn - Package Manager](https://yarnpkg.com/) make sure it's installed (`npm` works as well)
+   it's a popular package manager, that works well with react
   - create a project directory and cd into it
   - with yourProjectName run: `create-react-app yourProjectName`
   Project name cannot have capital letters (npm rule).
   This will create a subfolder yourProjectName
   - move into the new subfolder
-  - install [Yarn - Package Manager](https://yarnpkg.com/), it's a popular package manager, that works well with react
-  
-  
-  
-  
-  - JSX has to be compiled to JavaScript. Transpiler like Babel can do it. Babel can be run through a buid tool like Webpack.
-  - Facebook’s Create React App is good for the same purpose and can becsetup without initial configuration. To use it install:
-  - npm install -g create-react-app
-  - In the directory you’d like to create your project enter
-  `create-reac-app project-name`
-  Project name cannot have capital letters (npm rule).
-  - cd into your new project and start it with `npm start`
-  if something is already running on the port change it in `package.json`:
+  - run `yarn start` (or `npm start`)
+  if you need a different port you can change it in  `package.json`:
   ```js
-  {scripts 
+  "scripts" : { 
     “start” : “set PORT 3001 && react-scripts start”
   }  
   ```
+  
+   ## basic setup of a react up
+   
+   - in the `public/index.html` file you can find:
+   ```html
+  <body>
+    <div id="root"></div>
+  </body>
+   ``` 
+   
+   - the `div` is rendered by the `src/index.js` file:
+   ```js
+  import React from 'react';
+  import ReactDOM from 'react-dom';
+  import './index.css';
+  import App from './App';
+  
+  ReactDOM.render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>,
+    document.getElementById('root')
+  );
+   ```
+  
+  - based on the content of the `src/App.js`
+  ```jsx
+  import React from 'react';
+  import './App.css';
+  
+  function App() {
+    return (
+      <div className="App">
+          <p>
+            Edit <code>src/App.js</code> and save to reload.
+          </p>
+      </div>
+    );
+  }
+  
+  export default App;
+  ```
+  - App.js uses `jsx`
+    - `jsx` is a syntatic extensions to JavaScript
+    - it enables us to express react elements using HTML like syntax
+    - a react element defined in `jsx`
+    ```jsx
+    const element = (
+      <h1 classsName = "greeting">
+        Hello World
+      </h1>
+    );
+    ```
+    - will call react.createElemen function with 3 parameters:
+    ```js
+    const element = React.createElement(
+      'h1',
+      {className: 'greeting'},
+      'Hello, World'
+    );
+    ```
+    - which will create a corresponding JavaScript object:
+    ```js
+    const element = {
+      type: 'h1',
+      props: {
+        className: 'greeting',
+        children: 'Hello, World'
+      }
+    };
+    ```
+  
+  ## configure react app
+  
+  ### using `bootstrap` with react
+  - javascript based components of `bootstrap` cannot be used directly with react
+  - but we can use `Reactstrap`, which is `bootstrap` configured for react
+  - in project directory run `yarn add bootstrap` (or `nmp install --save bootstrap`)
+  - run `yarn add reactstrap react-popper`
+  - in `src/index.js` add:
+  ```js
+  // add it  before the line importing `./index.css`
+  // so that we can override standard bootstrap
+  
+  import 'bootstrap/dist/css/bootstrap.min.css';
+  ```
+  - in case of adding a `Navbar` in the `src/App.js` file add:
+  ```js
+  import { Navbar } from 'reactstrap';
+  ```
+  the `App` class:
+  ```js
+  
+  ```
+  
+  
+  
+  
+  ///////////// old notes down ///////////////
+  
+  - JSX has to be compiled to JavaScript. Transpiler like Babel can do it. Babel can be run through a buid tool like Webpack.
+  - Facebook’s Create React App is good for the same purpose and can becsetup without initial configuration. 
   
   ## How to add google map
   
