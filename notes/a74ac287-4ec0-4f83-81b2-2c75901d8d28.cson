@@ -1,5 +1,5 @@
 createdAt: "2019-08-19T16:56:04.257Z"
-updatedAt: "2020-02-07T20:12:20.280Z"
+updatedAt: "2020-04-02T20:25:36.085Z"
 type: "MARKDOWN_NOTE"
 folder: "68038d270558e5b040df"
 title: "Strings in Python"
@@ -96,7 +96,26 @@ content: '''
   my_str.find('cat')
   # -1
   ```
+  ### Converting strings to lists
   
+  - use `split()` to separate string to list elements
+  default separation character is space
+  ```python
+  my_str = 'one,two three'
+  lst1 = my_str.split();
+  print(lst1)
+  # ['one, two', 'three']
+  lst2 = my_str.split(',')
+  print(lst2)
+  # ['one', 'two three']
+  ```
+  
+  ### Converting lists to string
+  ```python
+  lst = ['h', 'e', 'l', 'l', 'o']
+  str = ''.join(lst)
+  # 'hello'
+  ```
   
 '''
 linesHighlighted: []

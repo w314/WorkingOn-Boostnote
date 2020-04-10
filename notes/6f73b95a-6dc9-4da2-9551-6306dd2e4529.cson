@@ -1,5 +1,5 @@
 createdAt: "2019-08-21T13:32:55.633Z"
-updatedAt: "2020-02-07T20:12:35.939Z"
+updatedAt: "2020-04-04T16:42:08.947Z"
 type: "MARKDOWN_NOTE"
 folder: "68038d270558e5b040df"
 title: "Sets in Python"
@@ -22,6 +22,10 @@ content: '''
   colors = {'green', 'green', 'blue', 'red'}
   colors
   # {'blue', 'green', 'red'}
+  ```
+  To create an empty set:
+  ```python
+  my_set = set()
   ```
   
   ### Convert list to a set

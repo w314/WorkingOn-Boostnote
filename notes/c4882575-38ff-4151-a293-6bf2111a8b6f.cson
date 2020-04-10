@@ -1,8 +1,8 @@
 createdAt: "2019-08-28T17:43:47.393Z"
-updatedAt: "2020-03-25T20:59:46.604Z"
+updatedAt: "2020-03-26T18:47:01.462Z"
 type: "MARKDOWN_NOTE"
 folder: "68038d270558e5b040df"
-title: "Python Control Stuctures"
+title: "Python Overview"
 tags: [
   "python"
   "loops"
@@ -10,9 +10,11 @@ tags: [
   "iteration"
 ]
 content: '''
-  # `Python` Control Stuctures
+  # `Python` Overview
   
-  ## iteration with loops
+  ## Control Structures
+  
+  ### iteration with loops
   ```python
   # Examples of iteration with for loops.
   

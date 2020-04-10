@@ -1,0 +1,181 @@
+createdAt: "2020-04-04T17:16:19.272Z"
+updatedAt: "2020-04-10T01:44:03.991Z"
+type: "MARKDOWN_NOTE"
+folder: "0502aa55141f2315e808"
+title: "Data Structures"
+tags: [
+  "data_structures"
+  "array"
+]
+content: '''
+  # Data Structures
+  
+  ## Arrays
+  - collection of items
+  - items have an order to them
+  - allows direct access
+  - When an array is created, it is always given some initial size—that is, the number of elements it should be able to hold (and how large each element is). 
+  - The computer then finds a block of memory and sets aside the space for the array. Importantly, the space that gets set aside is one, continuous block. That is, all of the elements of the array are contiguous, meaning that they are all next to one another in memory.
+  - all of the elements are the same size.
+  - Because all of the elements are 1) next to one another and 2) the same size, this means that if we know the location of the first element, we can calculate the location of any other element.
+  - Since we can easily calculate the location of any item in the array, we can assign each item an index and use that index to quickly and directly access the item.
+  - adding and removing elements are complicated (to add or delete an element in the middle of the array you have to move all the elements after it)
+  
+  ## Linked List
+  - items have an order to them
+  - elements of a list may or may not be next to one another in memory
+  - there are no indices
+  - allows no direct access only sequential
+  - first node is called the `head`
+  - in `Singly Linked Lists` each node is connected only to the next in the list
+  - `Double Linked Lists` has pointer to he next element as well as to the previous element
+  - if we keep track only the `head` of the list adding an extra element to the tail (`append`) runs in linear time `O(n)` as you have to iterate trough the list adding, however adding to the head of the list (`prepending`) can be done in constant time `O(1)` 
+  - `circular linked list` occurs when the chain of nodes links back to itself somewhere (in the middle)
+    - it's considered pathological as you can never reach teh end of the list
+    - we usually want to detect that we do not have a circle in our linked list
+  ### Arrays vs Linked Lists
+  - both store the value they store and extra information
+    - in Arrays it's the index
+    - in Linked List it's a reference to the next element (the memory address of the next element)
+  - insertion takes constant time in Linked List vs depending on where you are in an Array and how many elements you have to iterate through
+  
+  ### how to implement a simple linked list
+  - linked list is made of nodes
+  - each node has two things
+    - data or value we want the node to hold
+    - reference to the next node
+  - End of the list points to `None`
+  
+  ## Stacks
+  - `LIFO` last in first out 
+  - the opeartion when you add a new element to a stack is called `push` (O(1)) 
+  - taking an element off of the stack is called `pop` (O(1))
+  - you could use a linked list to implement it 
+  
+  
+  ## Queue
+  - `FIFO` structure, first in first out
+  - first element(oldest) is called the `head`
+  - the last element (newest) is called the `tail`
+  - when you add an element to the `tail` the operation is called `enqueue`
+  - when your remove the `head` element the operation is called `dequeue`
+  - if you look at the `head` element but do not remove it is called `peek`
+  -  `Deques` are special double ended `queue` that goes both ways, you can `enqueu` or `dequeu` from either end
+      - you can treat as a `stack`, enqueu and dequeu at the same end 
+      - or as a `queue` and add elements at one end and remove them from the other 
+  -  in a `priority queue` you assign each element a numerical priority when you insert them into the queue, when you deque you remove the element with the highest priority (the oldest of those if there are more of them)
+  
+  ## Trees
+  - is extension to `linked lists`
+  - individual elements contain value and often called `nodes`
+  - the first element is called a `root`
+  - the nodes in the tree can have several next elements
+  - rules of a tree:
+      - a tree must be completely connected (starting from the root there must be some way to reach every node)
+    - there must not be any cycles in the tree
+  - tree terminology:
+    - `level`: how many connections it takes to reach the `root` + 1 (root is level 1)
+    - `parent - child` relationship: a node connected at a higher level is a `child` of the `parent` node it's connected to at the lower level
+      - each `child` is allowed only one `parent`
+      - if a `parent` has multiple `children` they are called `siblings`
+      - you can talk about the same as `ancestor` and `desendants`
+    - `leaves` are the nodes at the end that don't have any children or `external nodes`
+    - `parent` nodes are called `internal nodes`
+    - a connection between two nodes is an `edge` a group of connections taken together a `path`
+    - `height of a node` is a number of edges between it and the furthest `leaf` of the tree
+      - `leaf` has a `height` of 0
+      - `parent` of a `leaf` has `height` of 1
+      - `height of a tree` = height of the root node
+    - `depth of a node` is a number of edges to the `root`
+      - `height` and `depth` go inversely
+  - `tree traversal`
+  - xxxxxxxxx`D`xxxxxxx
+  - xxxx`B`xxxxxxx`E`xx
+  - xx`A`x`C`xxxxxxx`F`
+    - `DFS` (Depth First Search) : if there children nodes to explore explore them first
+    - `BFS` (Breadth First Search) : priority is visiting every node on the level we are currently on before visiting any child nodes
+    - both `DFS` and `BFS` is vaguely defined as both can be implemented several different ways
+    - `Level Order` traversing is a `BFS` with a more exact algorithm
+      - start at the `root`
+      - visit levels one by one starting from the left most side of the level and move right
+    - `Pre Order Traversal` is a `DFS` method
+      - per means: check off a node as soons as you see it before you taverse any further into the tree (vs checking off a node's children first before checking off the node itself)
+      - we start at the `root` and check it off immideately
+      - move on the left child and check it off
+      - continue traverse down the left most nodes until reaching a leaf (checking off each nodes as we go through it)
+      - check off the `leaf` traverse back the `parent` and check off the next child of the parent
+      - D B A C E F
+    - `In Order Traversal` is also a `DFS` method
+      - we are moving through the nodes in the same order as in pre order traversal
+      - but we are only checking off a node if we have seen it's left child and came back to it
+      - start at the `root` but don't check it off yet as we have not seen the left child yet
+      - move til you find the first `leaf`, check off the `leaf`
+      - move up to the parent, as we have seen its left child we can check off the parent now
+      - move to the right child
+      - A B C D E F (as F is a right child it's visited after the parent)
+      - this moves trhough the tree in order from left to right
+    - `Post Order Traversal` (`DFS method`)
+      - you cannot check off a node until you have visited all of its desendants
+      - start at the root, dont check it off but find the leftmost leaf
+      - check off the leaf move to the parent, but don't check it off but go the next child first
+      - once all the children are checked off check off the parent
+      - A C B F E D
+  - `Binary Tree` (with no order)
+    - trees where parents have at most two children
+    - `search` in a binary tree:
+      - can use any of the traverse algorithm
+      - as there is no order to the nodes may have to go through all nodes to find the one we are looking for
+      - O(n)
+    - `delete` in binary tree:
+      - search for the element
+      - remove the element
+      - if it is not a `leaf` replace it with one of it's children or children's
+        - you cannot create a situation where nodes have more than two children
+        - may have to traverse to find a leaf to replace the deleted element with, as there is no order to the elements it is no problem
+        - O(n)
+      - `insert` in to the tree
+      -  tuck the new node to an other node
+      -  just make sure to obey the max two children rule
+      -  start at the root and move down the tree until you find an open spot
+      -  O(logn)
+  - `Binary Search Tree (BST)`
+    - type of binary tree
+    - sorted every value of the left of a particular node is smaller then it and on the rigth is larger than it
+    - xxxxxxxxx`5`xxxxxxx
+    - xxxx`3`xxxxxxx`8`xx
+    - xx`1`xxxxxxx`7`x`9`x
+    - `search` in binary tree
+      - O(logn) 
+      - when serching for '7', we start at root see that 7 > 5
+      - go to the right as 8 < 7 to the left ....
+      - we only have to traverse the `height` of the tree
+    -`insert` into `BST`
+      - O(logn)
+    - `deleting` from `BST`
+      - O(logn)
+    - `unbalanced binary search tree`
+      - `5`
+      - xx`10`
+      - xxxxx`15`
+      - while average search is O(logn)
+      - these unbalanced trees are worst case scenarios whith search O(n)
+  
+  ## Sets
+  - collection of items
+  - items have no order to them
+  - doesn't allow duplicate items
+  
+  
+  ## Maps 
+  - also called dictionaries
+  - is a key-value structure
+  - set based data structure, keys in a map are a set
+  
+  ### Hash Maps
+  - use the key of the map as the input of a hash function and store the key, value pair in the bucket of the hash value produced by the function
+  
+    
+'''
+linesHighlighted: []
+isStarred: false
+isTrashed: false
